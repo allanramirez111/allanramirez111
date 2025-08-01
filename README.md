@@ -13,7 +13,7 @@
 ## 🚀 Core Focus
 - Credit risk and fraud analytics
 - Scalable data pipelines (SQL/BigQuery)
-- Modern interfaces (e.g., migrating legacy to Streamlit)
+- Modern interfaces
 - Predictive modeling with emphasis on interpretability
 
 ---
@@ -28,5 +28,5 @@
 
 ## 📫 Contact
 - 📍 Colombia  
-- ✉️ youremail@example.com  
-- 🔗 Add your LinkedIn / personal site
+- ✉️ ramaasa@gmail.com 
+- 🔗 https://www.linkedin.com/in/allan-santiago-ramirez-mateus/
