@@ -6,9 +6,7 @@
 
 ## 🧰 Top Languages
 <!-- Replace `your-github-username` with your actual GitHub username below -->
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=your-github-username&layout=compact&theme=default)
-
-*Most used languages: Python, SQL, JavaScript*
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=allanramirez111&layout=compact&theme=default)
 
 ---
 
