@@ -10,11 +10,43 @@
 - I care about clarity: models should be interpretable, pipelines observable, and decisions traceable.  
 - Always improving—currently refining predictive regressions and modernizing legacy tools for web use.
   
----
+___
 
-## 🧰 Top Languages
-<!-- Replace `your-github-username` with your actual GitHub username below -->
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=allanramirez111&layout=compact&theme=default)
+## Languages and Tools...
+
+<p align = "center">
+  <!-- For more icons please follow  https://github.com/MikeCodesDotNET/ColoredBadges -->
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/r.svg" alt = "R" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/python.svg" alt = "Python" style = "vertical-align:top; margin:4px">
+  
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/js.svg" alt = "Js" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/html.svg" alt = "HTML" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/css3.svg" alt = "CSS" style = "vertical-align:top; margin:4px">
+  
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/tools/jetbrains_pycharm.svg" alt = "PyCharm" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/tools/visualstudio_code.svg" alt = "vsc" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/tools/docker.svg" alt = "Docker" style = "vertical-align:top; margin:4px">
+  
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/services/aws.svg" alt = "AWS" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/services/azure.svg" alt = "Azure" style = "vertical-align:top; margin:4px">
+  
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/misc/cloud.svg" alt = "cloud" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/misc/datascience.svg" alt = "datascience" style = "vertical-align:top; margin:4px">
+  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/misc/tools.svg" alt = "tools" style = "vertical-align:top; margin:4px">
+  
+  <br>
+  
+  <img src = "https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" alt = "git" width = "45" height = "40"/>
+  <img src = "https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg" alt = "github" width = "45" height = "40"/>
+  
+  <img src = "https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original.svg" alt="mysql" width = "45" height = "40"/>
+  <img src = "https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width = "45" height = "40"/>
+  <img src = "https://github.com/devicons/devicon/blob/master/icons/oracle/oracle-original.svg" alt="oracle" width = "45" height = "40"/>
+  <img src = "https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg" alt="postgresql" width = "45" height = "40"/>
+  
+  <img src = "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/jupyter-notebook/jupyter-notebook.png" alt="ipynb" width = "45" height = "40"/>
+  <img src = "https://github.com/devicons/devicon/blob/master/icons/pycharm/pycharm-original.svg" alt="pycharm" width = "45" height = "40"/>
+</p>
 
 ---
 
