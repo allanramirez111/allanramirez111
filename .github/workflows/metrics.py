@@ -5,8 +5,10 @@ instancias públicas de github-readme-stats. Dos tokens, a propósito:
 
   GH_TOKEN        PAT clásico, scope `read:user` (+ read:org). Solo contribuciones.
                   No da acceso a código.
-  GH_TOKEN_REPOS  PAT fine-grained de SOLO LECTURA (Metadata + Contents: read)
-                  acotado a los repos a contar. Da lenguajes y commits.
+  GH_TOKEN_REPOS  Uno o varios PAT de SOLO LECTURA separados por coma. Dan
+                  lenguajes y commits. Un PAT fine-grained tiene UN solo resource
+                  owner, así que hacen falta tantos como owners quieras contar
+                  (tu cuenta + cada org). Los resultados se fusionan por repo.
                   Opcional: sin él el bloque se degrada a contribuciones y días.
   METRICS_EMAILS  Opcional, separados por coma: los correos con que has firmado
                   commits. Va en secret y no en el fuente porque incluye correos
@@ -100,10 +102,19 @@ def consultar():
         return yo, None
     correos = [c.strip() for c in os.environ.get("METRICS_EMAILS", "").split(",") if c.strip()]
     autor = {"emails": correos} if correos else {"id": yo["id"]}
-    v = _post(Q_REPOS, {"autor": autor}, token_repos)
-    repos = {r["nameWithOwner"]: r for r in v["repositories"]["nodes"]}
-    for org in v["organizations"]["nodes"]:
-        repos.update({r["nameWithOwner"]: r for r in org["repositories"]["nodes"]})
+    repos = {}
+    for tk in [t.strip() for t in token_repos.split(",") if t.strip()]:
+        v = _post(Q_REPOS, {"autor": autor}, tk)
+        vistos = list(v["repositories"]["nodes"])
+        for org in v["organizations"]["nodes"]:
+            vistos += org["repositories"]["nodes"]
+        # Un token que no ve ni un repo con commits tuyos suele ser un fine-grained
+        # sin aprobar en su org: la API no falla, solo devuelve menos. Fallar aquí
+        # es preferible a publicar barras calculadas sobre la mitad del código.
+        if not any(mis_commits(r) for r in vistos):
+            raise SystemExit("un token de GH_TOKEN_REPOS no ve ningún repo con commits tuyos; "
+                             "revisa que esté aprobado para su organización")
+        repos.update({r["nameWithOwner"]: r for r in vistos})
     # Solo donde realmente escribiste: un repo de la org que nunca tocaste no dice
     # nada de ti, y su código falsearía las barras de lenguajes.
     return yo, [r for r in repos.values() if mis_commits(r)]

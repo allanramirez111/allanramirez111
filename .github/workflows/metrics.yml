@@ -30,7 +30,8 @@ jobs:
           # CONTRIBUCIONES: PAT clásico, scope `read:user` ÚNICAMENTE (+ read:org si
           #   la prueba lo exige). No da acceso a código.
           # LENGUAJES: PAT fine-grained de SOLO LECTURA (Metadata + Contents: read),
-          #   acotado a los repos que quieras contar. Un token por resource owner.
+          #   acotado a los repos que quieras contar. Un fine-grained tiene UN solo
+          #   resource owner: pon varios separados por coma (tu cuenta y cada org).
           # NO usar un PAT clásico con scope `repo`: es lectura Y ESCRITURA sobre
           #   todos los repos privados de las orgs. No existe `repo` de solo lectura.
           GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
