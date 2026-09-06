@@ -107,6 +107,11 @@ def consultar():
     autor = {"emails": correos} if correos else {"id": yo["id"]}
     repos = {}
     lista = [t.strip() for t in token_repos.split(",") if t.strip()]
+    # ",," (variables sin definir al armar el secret) es no-vacío pero no trae ningún
+    # token: sin esta guarda el bloque salía degradado y en verde, sin decir nada.
+    if not lista:
+        raise SystemExit("METRICS_TOKEN_REPOS tiene valor pero ningun token; "
+                         "borra el secret para el modo degradado, o cargalo bien")
     print(f"METRICS_TOKEN_REPOS: {len(lista)} token(s)")
     for i, tk in enumerate(lista, 1):
         v = _post(Q_REPOS, {"autor": autor}, tk, f"METRICS_TOKEN_REPOS #{i} de {len(lista)}")
