@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  issues: write      # para avisar cuando falle
 
 # Sin esto, el cron y un dispatch manual simultáneos hacen que el segundo push
 # muera con non-fast-forward.
@@ -55,3 +56,29 @@ jobs:
             git pull --rebase --autostash origin "$GITHUB_REF_NAME"
           done
           exit 1
+
+      # Un run rojo queda enterrado en la pestaña Actions. Un issue llega por correo
+      # y se ve. Importa porque el fallo encadena: sin commits, GitHub apaga el cron
+      # a los 60 días de inactividad y ya no se recupera solo.
+      - name: Abrir un issue si falló
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITULO: "Las métricas del perfil dejaron de actualizarse"
+        run: |
+          # Uno solo, no uno por día.
+          abiertos=$(gh issue list --state open --search "in:title \"$TITULO\"" --json number --jq 'length')
+          [ "$abiertos" -gt 0 ] && exit 0
+          gh issue create --title "$TITULO" --body "El workflow \`metrics\` falló.
+
+          Causas típicas, en orden de frecuencia:
+          - \`METRICS_TOKEN\` o \`METRICS_TOKEN_REPOS\` revocado, expirado o regenerado
+            (editar la expiración de un PAT clásico **cambia su valor**).
+          - Una organización volvió a restringir los PAT clásicos.
+          - Al token de repos le falta \`read:org\`: sin él \`viewer.organizations\`
+            devuelve vacío y el bloque sale con los repos personales nada más.
+
+          Log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          Mientras esto siga fallando el README no se actualiza, y a los 60 días sin
+          commits GitHub deshabilita el cron."
