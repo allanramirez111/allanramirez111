@@ -74,7 +74,8 @@ def _post(query, variables, token, intentos=4):
                 cuerpo = json.load(r)
         except urllib.error.HTTPError as e:
             if e.code == 401 or ultimo:          # token malo: reintentar no ayuda
-                raise SystemExit(f"API de GitHub: HTTP {e.code}")
+                raise SystemExit(f"API de GitHub: HTTP {e.code}"
+                                 + (" — token invalido, revocado o mal pegado" if e.code == 401 else ""))
             time.sleep(int(e.headers.get("Retry-After") or 5 * 2 ** i))
             continue
         except (urllib.error.URLError, TimeoutError):
@@ -96,8 +97,10 @@ def _post(query, variables, token, intentos=4):
 
 
 def consultar():
-    yo = _post(Q_YO, {}, os.environ["GH_TOKEN"])
-    token_repos = os.environ.get("GH_TOKEN_REPOS") or ""
+    # .strip(): pegar un token en `gh secret set` deja un \n al final con facilidad,
+    # y "bearer ghp_...\n" devuelve 401 sin decir por qué.
+    yo = _post(Q_YO, {}, os.environ["GH_TOKEN"].strip())
+    token_repos = (os.environ.get("GH_TOKEN_REPOS") or "").strip()
     if not token_repos:
         return yo, None
     correos = [c.strip() for c in os.environ.get("METRICS_EMAILS", "").split(",") if c.strip()]
