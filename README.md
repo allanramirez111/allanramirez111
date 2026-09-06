@@ -28,14 +28,14 @@
 <!--METRICS:start-->
 ### Activity
 
-**5,878** contributions in the last year &nbsp;·&nbsp; **108** active days &nbsp;·&nbsp; **4,452** commits authored across **25** repositories
+**5,907** contributions in the last year &nbsp;·&nbsp; **109** active days &nbsp;·&nbsp; **4,476** commits authored across **25** repositories
 
 ```text
 Python         █████████████████▊            63.3%
 TypeScript     █████▍                        19.3%
 R              ███▌                          12.6%
 Go             ▋                              2.4%
-HCL            ▍                              1.1%
+HCL            ▍                              1.2%
 Shell          ▏                              0.7%
 ```
 
