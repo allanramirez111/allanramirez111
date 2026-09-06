@@ -61,7 +61,7 @@ def mis_commits(repo):
     return ((repo.get("defaultBranchRef") or {}).get("target") or {}).get("mios", {}).get("totalCount", 0)
 
 
-def _post(query, variables, token, intentos=4):
+def _post(query, variables, token, etiqueta, intentos=4):
     req = urllib.request.Request(
         "https://api.github.com/graphql",
         data=json.dumps({"query": query, "variables": variables}).encode(),
@@ -74,13 +74,13 @@ def _post(query, variables, token, intentos=4):
                 cuerpo = json.load(r)
         except urllib.error.HTTPError as e:
             if e.code == 401 or ultimo:          # token malo: reintentar no ayuda
-                raise SystemExit(f"API de GitHub: HTTP {e.code}"
+                raise SystemExit(f"[{etiqueta}] API de GitHub: HTTP {e.code}"
                                  + (" — token invalido, revocado o mal pegado" if e.code == 401 else ""))
             time.sleep(int(e.headers.get("Retry-After") or 5 * 2 ** i))
             continue
         except (urllib.error.URLError, TimeoutError):
             if ultimo:
-                raise SystemExit("no se pudo contactar la API de GitHub")
+                raise SystemExit(f"[{etiqueta}] no se pudo contactar la API de GitHub")
             time.sleep(5 * 2 ** i)
             continue
         errores = cuerpo.get("errors")           # un token sin scope devuelve 200 con errors
@@ -91,23 +91,25 @@ def _post(query, variables, token, intentos=4):
                 continue
             # Solo los tipos: los mensajes de GraphQL citan repos y orgs por nombre, y
             # los logs de Actions de un repo público son públicos.
-            raise SystemExit(f"GraphQL: {tipos} — reproducir en local con el mismo PAT")
+            raise SystemExit(f"[{etiqueta}] GraphQL: {tipos} — reproducir en local con el mismo PAT")
         return cuerpo["data"]["viewer"]
-    raise SystemExit("agotados los reintentos")
+    raise SystemExit(f"[{etiqueta}] agotados los reintentos")
 
 
 def consultar():
     # .strip(): pegar un token en `gh secret set` deja un \n al final con facilidad,
     # y "bearer ghp_...\n" devuelve 401 sin decir por qué.
-    yo = _post(Q_YO, {}, os.environ["GH_TOKEN"].strip())
+    yo = _post(Q_YO, {}, os.environ["GH_TOKEN"].strip(), "METRICS_TOKEN")
     token_repos = (os.environ.get("GH_TOKEN_REPOS") or "").strip()
     if not token_repos:
         return yo, None
     correos = [c.strip() for c in os.environ.get("METRICS_EMAILS", "").split(",") if c.strip()]
     autor = {"emails": correos} if correos else {"id": yo["id"]}
     repos = {}
-    for tk in [t.strip() for t in token_repos.split(",") if t.strip()]:
-        v = _post(Q_REPOS, {"autor": autor}, tk)
+    lista = [t.strip() for t in token_repos.split(",") if t.strip()]
+    print(f"METRICS_TOKEN_REPOS: {len(lista)} token(s)")
+    for i, tk in enumerate(lista, 1):
+        v = _post(Q_REPOS, {"autor": autor}, tk, f"METRICS_TOKEN_REPOS #{i} de {len(lista)}")
         vistos = list(v["repositories"]["nodes"])
         for org in v["organizations"]["nodes"]:
             vistos += org["repositories"]["nodes"]
