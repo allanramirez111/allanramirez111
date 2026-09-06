@@ -1,76 +1,97 @@
-# 👋 Hi, I’m Allan Ramírez
+<h1 align="center">Allan Santiago Ramírez Mateus</h1>
 
-**Statistician** from the *National University of Colombia* with a Master's in *Analytics* from *Universidad de los Andes*. I build data-informed systems with experience in **credit risk** and **fraud detection**, optimizing pipelines and deploying practical solutions. I enjoy turning messy data into clear insights and building practical tools that help teams to make decisions more reliably.
+<p align="center">
+  <b>Risk engineer</b> · I build the software that regulated financial institutions use to
+  measure interest-rate, liquidity, operational and credit risk.<br>
+  Statistician (UNAL) · MSc Analytics (Uniandes) · Bogotá, Colombia
+</p>
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black">
+  <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white">
+  <img src="https://img.shields.io/badge/Terraform-7B42BC?style=flat-square&logo=terraform&logoColor=white">
+  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white">
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white">
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white">
+  <img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white">
+</p>
 
-## 🌟 About Me
-- Data-minded problem solver with a background in credit risk & fraud analytics.  
-- I work on making data pipelines lean and trustworthy (mostly in SQL/BigQuery) and wrapping them with user-friendly interfaces like Streamlit.  
-- I care about clarity: models should be interpretable, pipelines observable, and decisions traceable.  
-- Always improving—currently refining predictive regressions and modernizing legacy tools for web use.
-  
-___
-
-## Languages and Tools...
-
-<p align = "center">
-  <!-- For more icons please follow  https://github.com/MikeCodesDotNET/ColoredBadges -->
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/r.svg" alt = "R" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/python.svg" alt = "Python" style = "vertical-align:top; margin:4px">
-  
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/js.svg" alt = "Js" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/html.svg" alt = "HTML" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/languages/css3.svg" alt = "CSS" style = "vertical-align:top; margin:4px">
-  
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/tools/jetbrains_pycharm.svg" alt = "PyCharm" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/tools/visualstudio_code.svg" alt = "vsc" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/tools/docker.svg" alt = "Docker" style = "vertical-align:top; margin:4px">
-  
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/services/aws.svg" alt = "AWS" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/services/azure.svg" alt = "Azure" style = "vertical-align:top; margin:4px">
-  
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/misc/cloud.svg" alt = "cloud" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/misc/datascience.svg" alt = "datascience" style = "vertical-align:top; margin:4px">
-  <img src = "https://github.com/MikeCodesDotNET/ColoredBadges/blob/master/svg/dev/misc/tools.svg" alt = "tools" style = "vertical-align:top; margin:4px">
-  
-  <br>
-  
-  <img src = "https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" alt = "git" width = "45" height = "40"/>
-  <img src = "https://github.com/devicons/devicon/blob/master/icons/github/github-original.svg" alt = "github" width = "45" height = "40"/>
-  
-  <img src = "https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original.svg" alt="mysql" width = "45" height = "40"/>
-  <img src = "https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original.svg" alt="mongodb" width = "45" height = "40"/>
-  <img src = "https://github.com/devicons/devicon/blob/master/icons/oracle/oracle-original.svg" alt="oracle" width = "45" height = "40"/>
-  <img src = "https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg" alt="postgresql" width = "45" height = "40"/>
-  
-  <img src = "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/jupyter-notebook/jupyter-notebook.png" alt="ipynb" width = "45" height = "40"/>
-  <img src = "https://github.com/devicons/devicon/blob/master/icons/pycharm/pycharm-original.svg" alt="pycharm" width = "45" height = "40"/>
+<p align="center">
+  <a href="https://www.linkedin.com/in/allan-santiago-ramirez-mateus/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"></a>
+  <a href="mailto:ramaasa@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white"></a>
 </p>
 
 ---
 
-## 🚀 Core Focus
-- Credit risk and fraud analytics
-- Scalable data pipelines (SQL/BigQuery)
-- Modern interfaces
-- Predictive modeling with emphasis on interpretability
+<!--METRICS:start-->
+### Activity
+
+**5,828** contributions in the last year &nbsp;·&nbsp; **108** active days &nbsp;·&nbsp; **4,414** commits authored across **25** repositories
+
+```text
+Python         █████████████████▊            63.3%
+TypeScript     █████▍                        19.3%
+R              ███▌                          12.6%
+Go             ▋                              2.4%
+HCL            ▍                              1.1%
+Shell          ▏                              0.7%
+```
+
+<sub>Language split by source bytes; notebooks and generated HTML excluded. Most of the work lives in private product repositories; these numbers come from the GitHub API, not from a hand-written list. Updated 2026-09-05.</sub>
+<!--METRICS:end-->
 
 ---
 
-## 📁 Featured Projects
-*(Link repositories and replace descriptions as needed)*
-- **Analytics Pipeline** – Integrated metrics with robust KPIs and dashboards for content control.
-- **Web tools** – Build web interfaces tools in order to take data-driven decisions, preserving business logic and applying clean architecture.
-- **Execution Time Predictors** – Regression models (SVR, Kernel methods, MLP) for structured workloads with strong generalization focus.
+## What I'm building
+
+Risk software for regulated financial institutions — Basel/EBA on the banking side,
+Supersolidaria on the co-op side. The code is in private product repos, so this page
+describes what it is and how it is built rather than linking to it.
+
+| | What it does | Stack |
+|---|---|---|
+| **ALM / IRRBB engine** | Interest-rate risk in the banking book: NIIF 9 contractual cash flows, EVE/VEP and NII indicators per **BCBS 368** and **EBA GL 2018/02**, plus reference LCR/NSFR. French amortization, monthly CPR, 19 time buckets, multi-currency. Ships two ways from one codebase: single-tenant on-premise via Docker, and multi-tenant SaaS. | Python 3.11 · React/TS · Terraform · AWS ECS Fargate · RDS · ElastiCache |
+| **SARO** — operational risk | Risk taxonomy parameterized by regulatory framework (CO-SES per Supersolidaria's CBCF, CO-SFC per Basel/SFC), inherent/residual scoring, control registry, heat maps. In pilot on staging with a financial institution. | Python · FastAPI · PostgreSQL · Terraform · AWS |
+| **Institutional performance eval.** | Scoring engine plus a React console over weighted indicators, bands and instruments. | Python · TypeScript/React · Terraform · AWS |
+| **Credit-risk indicator suite** | Vintage/cohort analysis, transition matrices and reserve models (roll-rate, charge-off, payment factors, P&L impact) on a serverless pipeline. | Python · DuckDB · AWS Lambda · Step Functions · LocalStack |
+| **Design system** | Brand tokens vendored into each product, pinned by source SHA in a `VENDOR.txt` manifest; a guard test re-hashes every vendored file and fails CI on a single changed byte. | CSS · Python |
+
+*Specced, not yet built* — liquidity risk engine (IRL, standard Supersolidaria methodology,
+early-warning triggers, stress scenarios) and risk appetite (four-zone classification,
+financial-statement projection, SIAR indicators): ~170 KB of functional spec written,
+implementation queued.
 
 ---
 
-## 📫 Contact
-- 📍 Colombia  
-- ✉️ ramaasa@gmail.com 
-- 🔗 https://www.linkedin.com/in/allan-santiago-ramirez-mateus/
+## How I work
+
+**Tests and CI are not optional.** 967 test files across the product codebases — 560 of
+them in the ALM engine alone. CI runs on push, with Terraform `fmt`/`validate` as its own
+job. Infrastructure is Terraform, not click-ops.
+
+**A vendored asset without verification is worse than a CDN — the CDN at least updates.**
+Every vendored file carries its sha256 in a manifest and its origin SHA in its own header;
+a test compares all three and names the offending file.
+
+**I verify instead of assuming.** The Postgres restore runbook was rehearsed against
+staging: RTO 70 min end to end, RPO measured at 6 min 55 s against a spec that promised
+5 min. The promise was rewritten, not the measurement.
+
+**I write down the trade-offs that don't flatter me.** Moving CI to a self-hosted runner
+cut per-job time (2m22s → 1m21s) but raised wall-clock per PR (2m22s → 2m49s), because the
+jobs stopped running in parallel. That is in the ADR, including what it costs.
+
+Happy to walk through the architecture, the CI setup or the test strategy in a call — I
+just can't open the repos.
 
 ---
 
-*Happy to collaborate, share ideas, or help debug a tricky SQL join. 🚀*
+## Background
+
+- **Credit risk analytics** — vintage/cohort analysis, transition matrices, reserve models.
+- **Data pipelines** — SQL-first (PostgreSQL, DuckDB); ETL that other people can debug.
+- **Interpretability first** — models should be explainable, pipelines observable, decisions traceable.
+
+<p align="center"><sub>Open to conversations about risk engineering, regulated fintech products, and Python/Go backends.</sub></p>

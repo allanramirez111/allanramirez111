@@ -1,0 +1,56 @@
+name: metrics
+
+on:
+  schedule:
+    # 06:17 UTC (01:17 Bogotá). Minuto no-cero a propósito: los schedule en :00
+    # son los que más se retrasan o se saltan por carga.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Sin esto, el cron y un dispatch manual simultáneos hacen que el segundo push
+# muera con non-fast-forward.
+concurrency:
+  group: metrics
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # lo pide el `pull --rebase` del reintento
+
+      - name: Consultar la API y reescribir el README
+        env:
+          # CONTRIBUCIONES: PAT clásico, scope `read:user` ÚNICAMENTE (+ read:org si
+          #   la prueba lo exige). No da acceso a código.
+          # LENGUAJES: PAT fine-grained de SOLO LECTURA (Metadata + Contents: read),
+          #   acotado a los repos que quieras contar. Un token por resource owner.
+          # NO usar un PAT clásico con scope `repo`: es lectura Y ESCRITURA sobre
+          #   todos los repos privados de las orgs. No existe `repo` de solo lectura.
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN }}
+          GH_TOKEN_REPOS: ${{ secrets.METRICS_TOKEN_REPOS }}
+          # Correos con que has firmado commits, separados por coma. En un secret:
+          # incluye correos corporativos que no deben quedar en un repo público.
+          METRICS_EMAILS: ${{ secrets.METRICS_EMAILS }}
+        run: python3 .github/workflows/metrics.py
+
+      # Se salta si el paso anterior falló (default `if: success()`): mejor un README
+      # con datos de ayer que uno a medio escribir.
+      - name: Commit si cambió
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet && exit 0
+          git commit -m "chore: actualizar métricas"
+          for i in 1 2 3; do
+            git push && exit 0
+            git pull --rebase --autostash origin "$GITHUB_REF_NAME"
+          done
+          exit 1
