@@ -28,7 +28,7 @@
 <!--METRICS:start-->
 ### Activity
 
-**10,104** contributions in the last year &nbsp;·&nbsp; **119** active days &nbsp;·&nbsp; **7,566** commits authored across **28** repositories
+**10,102** contributions in the last year &nbsp;·&nbsp; **119** active days &nbsp;·&nbsp; **7,566** commits authored across **28** repositories
 
 ```text
 Python         ██████████████████▊           66.9%
@@ -39,7 +39,7 @@ HCL            ▍                              1.2%
 Shell          ▏                              0.6%
 ```
 
-<sub>Language split by source bytes; notebooks and generated HTML excluded. Most of the work lives in private product repositories; these numbers come from the GitHub API, not from a hand-written list. Updated 2026-09-20.</sub>
+<sub>Language split by source bytes; notebooks and generated HTML excluded. Most of the work lives in private product repositories; these numbers come from the GitHub API, not from a hand-written list. Updated 2026-09-21.</sub>
 <!--METRICS:end-->
 
 ---
