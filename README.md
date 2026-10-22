@@ -28,18 +28,18 @@
 <!--METRICS:start-->
 ### Activity
 
-**28,198** contributions in the last year &nbsp;·&nbsp; **149** active days &nbsp;·&nbsp; **20,689** commits authored across **31** repositories
+**28,665** contributions in the last year &nbsp;·&nbsp; **150** active days &nbsp;·&nbsp; **21,032** commits authored across **31** repositories
 
 ```text
-Python         ████████████████████▎         72.2%
-TypeScript     ████▌                         15.9%
-R              ██                             7.3%
-HCL            ▍                              1.5%
-Go             ▍                              1.4%
+Python         ████████████████████▏         72.0%
+TypeScript     ████▌                         16.0%
+R              ██                             7.2%
+Go             ▌                              1.6%
+HCL            ▌                              1.6%
 JavaScript     ▎                              0.7%
 ```
 
-<sub>Language split by source bytes; notebooks and generated HTML excluded. Most of the work lives in private product repositories; these numbers come from the GitHub API, not from a hand-written list. Updated 2026-10-21.</sub>
+<sub>Language split by source bytes; notebooks and generated HTML excluded. Most of the work lives in private product repositories; these numbers come from the GitHub API, not from a hand-written list. Updated 2026-10-22.</sub>
 <!--METRICS:end-->
 
 ---
