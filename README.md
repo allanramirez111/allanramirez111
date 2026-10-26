@@ -39,7 +39,7 @@ HCL            ▍                              1.5%
 JavaScript     ▎                              0.7%
 ```
 
-<sub>Language split by source bytes; notebooks and generated HTML excluded. Most of the work lives in private product repositories; these numbers come from the GitHub API, not from a hand-written list. Updated 2026-10-25.</sub>
+<sub>Language split by source bytes; notebooks and generated HTML excluded. Most of the work lives in private product repositories; these numbers come from the GitHub API, not from a hand-written list. Updated 2026-10-26.</sub>
 <!--METRICS:end-->
 
 ---
